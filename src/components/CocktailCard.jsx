@@ -1,4 +1,4 @@
-function CocktailCard({cocktail,deleteButton}){
+function CocktailCard({cocktail,deleteButton,likeButton,isLiked}){
 
     return(
         <div className="card" key={cocktail.id}>
@@ -11,6 +11,7 @@ function CocktailCard({cocktail,deleteButton}){
             </ol>
             <p>Flavor Profile : {cocktail.flavorProfile}</p>
             <button onClick={deleteButton}>Delete</button>
+            <button onClick={likeButton}>{isLiked ? "LIKED!!":"Like" }</button>
         </div>
     )
 
