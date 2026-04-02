@@ -9,7 +9,7 @@ function CocktailsList(){
         setCurrentCocktails(currentCocktails.filter(drink=> drink.id !== id))
     }
     function handleLike(id){
-        console.log(liked)
+        
         if(!liked.includes(id)){
             setLiked([...liked,id])
             return
@@ -27,7 +27,7 @@ function CocktailsList(){
                      deleteButton={()=>{deleteCocktail(drink.id)}}/>
                 )}
             
-           {/* <CocktailCard cocktail={cocktails[5]}/> */}
+           
         </div>
     )
 

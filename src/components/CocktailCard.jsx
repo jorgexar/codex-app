@@ -9,9 +9,9 @@ function CocktailCard({cocktail,deleteButton,likeButton,isLiked}){
                 {cocktail.ingredients.map((ingredient,i)=><li key={i}>{ingredient}</li>)
                 }
             </ol>
-            <p>Flavor Profile : {cocktail.flavorProfile}</p>
+            <p>Flavor Profile : {cocktail.flavorProfile.join(", ")}</p>
             <button onClick={deleteButton}>Delete</button>
-            <button onClick={likeButton}>{isLiked ? "LIKED!!":"Like" }</button>
+            <button onClick={likeButton}>{isLiked ? "❤️":"🤍" }</button>
         </div>
     )
 
